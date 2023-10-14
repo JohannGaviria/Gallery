@@ -1,0 +1,71 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80vh;
+}
+
+.file-box {
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(119, 119, 119, 0.5);
+    padding: 40px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.file-box h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.file-input {
+    background-color: transparent;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    position: relative;
+}
+
+.file-input:hover {
+    border-color: #fff;
+}
+
+.file-input p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.file-input p span {
+    font-weight: bold;
+    color: #FF3333;
+}
+
+.file-input p:hover span {
+    color: #ff1919;
+    text-decoration: underline;
+}
+
+.upload-icon {
+    font-size: 200px;
+    color: #ccc;
+}
+
+.file-input:hover .upload-icon {
+    color: #fff;
+}
+
+.drop-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drop-area:hover {
+    border: 2px dashed #fff;
+}

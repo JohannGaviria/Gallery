@@ -1,0 +1,49 @@
+2023-10-14 17:33:33 | INFO | La imagen se guardó con éxito como '1695517552.jpg'
+2023-10-14 17:33:40 | INFO | La imagen se guardó con éxito como '5336091546.jpg'
+2023-10-14 17:33:45 | INFO | La imagen se guardó con éxito como '7552153067.jpg'
+2023-10-14 17:39:53 | ERROR | 1049 (42000): Unknown database 'gallery'
+2023-10-14 17:39:53 | ERROR | Traceback (most recent call last):
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 302, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown database 'gallery'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\src\database\connection.py", line 11, in connectionDB
+    mysdb = mysql.connector.connect(
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\pooling.py", line 293, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 128, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\abstracts.py", line 1217, in connect
+    self._open_connection()
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 307, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'gallery'
+
+2023-10-14 17:41:05 | ERROR | 1049 (42000): Unknown database 'gallery'
+2023-10-14 17:41:05 | ERROR | Traceback (most recent call last):
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 302, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown database 'gallery'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\src\database\connection.py", line 11, in connectionDB
+    mysdb = mysql.connector.connect(
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\pooling.py", line 293, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 128, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\abstracts.py", line 1217, in connect
+    self._open_connection()
+  File "C:\Users\bloos\OneDrive\Documentos\Programacion\Proyectos\galery\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 307, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'gallery'
+

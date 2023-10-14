@@ -1,0 +1,11 @@
+{% include "includes/header.html" %}
+
+<div class="error-container">
+    <i class="fas fa-exclamation-circle fa-7x text-danger"></i>
+    <h2>¡Oops!</h2>
+    <p>Página no encontrada</p>
+    <p><a href="{{ url_for('index_blueprint.index') }}">Volver a la página de inicio</a></p>
+</div>
+
+{% include "includes/footer.html" %}
+

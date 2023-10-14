@@ -1,0 +1,21 @@
+{% include "includes/header.html" %}
+
+<main>
+
+    <div class="box">
+        <div class="file-box">
+            <form action="/app/upload" method="POST" enctype="multipart/form-data">
+                <h2>Sube una Nueva Imagen</h2>
+                <label class="file-input">
+                    <input type="file" id="file" accept=".jpg, .jpeg, .png" name="picture" style="display: none;">
+                    <div id="drop-area" class="drop-area">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <p>Arrastra y suelta un archivo o haz clic aquí para <span>seleccionar un archivo</span>.</p>
+                    </div>                    
+                </label>
+            </form>
+        </div>
+    </div>
+    {% include "includes/customs.html" %}
+</main>
+{% include "includes/footer.html" %}

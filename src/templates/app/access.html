@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/logo/logo.jpg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/access.css') }}">
+    <title id="pageTitle">Iniciar Sesión</title>
+</head>
+<body>
+    <main>
+        <div class="container-all">
+            <div class="back-box">
+                <div class="back-box-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn-login">Iniciar Sesión</button>
+                </div>
+                <div class="back-box-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn-register">Regístrarse</button>
+                </div>
+            </div>
+
+            <div class="login-register-container">
+                <form action="{{ url_for('access_blueprint.access') }}" method="POST" class="login-form">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="form-group">
+                        <label for="username"><i class="fa fa-user"></i></label>
+                        <input type="text" id="username" name="username-login" placeholder="Usuario o Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fa fa-lock"></i></label>
+                        <input type="password" id="password-login" name="password-login" placeholder="Contraseña">
+                        <span class="password-toggle" id="password-toggle-login"><i class="fa fa-eye"></i></span>
+                    </div>
+                    <button type="submit" name="login-button">Iniciar Sesión</button>
+                </form>
+
+                <form action="{{ url_for('access_blueprint.access') }}" method="POST" class="register-form">
+                    <h2>Regístrarse</h2>
+                    <div class="form-group">
+                        <label for="fullname"><i class="fa fa-user"></i></label>
+                        <input type="text" id="fullname" name="fullname-register" placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fa fa-envelope"></i></label>
+                        <input type="email" id="email" name="email-register" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="username"><i class="fa fa-user"></i></label>
+                        <input type="text" id="username" name="username-register" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="password-register"><i class="fa fa-lock"></i></label>
+                        <input type="password" id="password-register" name="password-register" placeholder="Contraseña">
+                        <span class="password-toggle" id="password-toggle-register"><i class="fa fa-eye"></i></span>
+                    </div>
+                    <button type="submit" name="register-button">Regístrarse</button>
+                </form>
+            </div>
+        </div>
+
+        {% include "includes/customs.html" %}
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/access.js') }}"></script>
+</body>
+</html>

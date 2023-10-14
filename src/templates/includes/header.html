@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/logo/logo.jpg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/customs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pageNotFound.css') }}">
+    <title>
+        gallery | 
+        {% if type_page == 'gallery' %} Galeria {% endif %}
+        {% if type_page == 'upload' %} Subir {% endif %}
+        {% if type_page == 'pageNotFound' %} Pagina 404 {% endif %}
+    </title>
+</head>
+
+<header class="header">
+    <div class="logo">
+        <a href="{{ url_for('gallery_blueprint.gallery') }}">
+            <p class="logo-txt">gallery</p>
+        </a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars" id="menu-icon"></i>
+        <i class="fas fa-times" id="close-icon" style="display: none;"></i>
+    </div>
+    <nav class="menu-navegacion">
+        <a href="{{ url_for('gallery_blueprint.gallery') }}"><i class="fas fa-images"></i> Galeria</a>
+        <a href="{{ url_for('upload_blueprint.upload') }}"><i class="fas fa-upload"></i> Subir</a>
+        <a href="{{ url_for('logout_blueprint.logout') }}"><i class="fas fa-sign-out-alt"></i> Salir</a>
+    </nav>
+</header>

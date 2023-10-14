@@ -1,0 +1,29 @@
+{% include "includes/header.html" %}
+
+    {% if pictures %}
+        <div class="grid-container">
+            {% for picture in pictures %}
+            <img src="{{ url_for('static', filename='assets/uploads/pictures/' + picture['picture']) }}" alt="{{ picture['picture'] }}" class="grid-item">
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Imagen Modal">
+                
+                <div class="modal-icons">
+                    <a class="prev" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></a>
+                    <a class="next" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></a>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if not pictures %}
+        <div class="not-image">
+            <h2 class="message-title">¡Hola, <span>{{ session['username'] }}</span>!</h2>
+            <p class="message-text">No has subido ninguna imagen todavía, ¡pero puedes hacerlo ahora!</p>
+            <a href="{{ url_for('upload_blueprint.upload') }}" class="upload-link">Presiona aquí para subir una imagen.</a>
+        </div>
+    {% endif %}
+    
+
+{% include "includes/footer.html" %}
